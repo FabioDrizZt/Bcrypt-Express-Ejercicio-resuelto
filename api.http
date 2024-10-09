@@ -1,0 +1,23 @@
+### Probar la ruta de bienvenida
+GET http://localhost:3000/
+
+###
+
+### Probar encriptación de contraseña
+POST http://localhost:3000/encriptar
+Content-Type: application/json
+
+{
+  "password": "miSuperSecretaContraseña"
+}
+
+###
+
+### Probar comparación de contraseña con hash
+POST http://localhost:3000/comparar
+Content-Type: application/json
+
+{
+  "password": "miSuperSecretaContraseña",
+  "hash": "$2a$12$GUqazb2q0r3605LdY8M4beCOVdlSkIiAMFkPPDnhJxi8r4GCK39Za"
+}
